@@ -1,5 +1,5 @@
 /** ------------------------ DOM ELEMENTS ------------------------ **/
-const burgerMenuBtn = document.getElementById("burgerMenuBtn");
+// const burgerMenuBtn = document.getElementById("burgerMenuBtn");
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".btn-modal");
 const formContainer = document.getElementById("formContainer");
@@ -18,14 +18,14 @@ const errorMsgElements = {
 };
 
 /** ------------------------ NAVIGATION MENU ------------------------ **/
-burgerMenuBtn.addEventListener("click", () => {
-  const nav = document.getElementById("myTopnav");
-  const headerLogo = document.querySelector(".header-logo");
-  const isResponsive = nav.className.includes("responsive");
-
-  nav.className = isResponsive ? "" : "responsive";
-  headerLogo.style.display = isResponsive ? "block" : "none";
-});
+function toggleMenu() {
+  var menu = document.getElementById('menuContainer');
+  if (menu.style.left === '0px') {
+      menu.style.left = '-100%'; // Cache le menu
+  } else {
+      menu.style.left = '0px'; // Affiche le menu
+  }
+}
 
 /** ------------------------ FORM DATA AND VALIDATION ------------------------ **/
 const formInputs = {

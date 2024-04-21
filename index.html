@@ -4,10 +4,10 @@
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="modal.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link
       href="https://fonts.googleapis.com/css?family=DM+Sans"
@@ -23,28 +23,40 @@
       <nav class="nav-links">
         <ul>
           <li>
-            <a href="#" class="active"><span>Détails de l'évènement</span></a>
+            <a class="link" href="#" class="active"><span>Détails de l'évènement</span></a>
           </li>
           <li>
-            <a href="#"><span>À propos</span></a>
+            <a class="link" href="#"><span>À propos</span></a>
           </li>
           <li>
-            <a href="#"><span>Contact</span></a>
+            <a class="link" href="#"><span>Contact</span></a>
           </li>
           <li>
-            <a href="#"><span>Évènements passés</span></a>
+            <a class="link" href="#"><span>Évènements passés</span></a>
           </li>
-          <a
-            href="javascript:void(0);"
-            class="icon"
-            id="burgerMenuBtn"
-            aria-roledescription="open menu"
-          >
-            <i class="fa fa-bars"></i>
-          </a>
         </ul>
       </nav>
+      <div
+          onclick="toggleMenu()"
+          class="btn-menu-burger"
+          id="burgerMenuBtn"
+          aria-roledescription="open menu"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
+
+    <div class="menu-container" id="menuContainer">
+      <div class="close-menu" onclick="toggleMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <ul>
+          <li><a href="#">Détails de l'évènement</a></li>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Évènements passés</a></li>
+      </ul>
+    </div>
 
     <main>
       <section class="hero-section">
@@ -239,6 +251,7 @@
     <footer>
       <p class="copyrights">Copyright 2014 - 2022, GameOn Inc.</p>
     </footer>
-    <script src="modal.js"></script>
+
+    <script src="index.js"></script>
   </body>
 </html>
