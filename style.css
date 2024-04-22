@@ -17,7 +17,8 @@ body {
   font-size: 18px;
   max-width: 1300px;
   margin-inline: auto;
-  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
 }
 
 ul {
@@ -58,8 +59,7 @@ header {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  height: 50px;
-  margin: 20px 0 35px 0;
+  height: 120px !important;
   a {
     display: block;
     color: #000000;
@@ -94,10 +94,12 @@ header {
     display: none !important;
     width: 36px;
     height: 36px;
+    border-radius: 5px;
   }
   & .btn-menu-burger:hover {
     color: white;
     background-color: red;
+    border-radius: 5px;
   }
 }
 
@@ -145,15 +147,15 @@ main {
   font-size: 130%;
   font-weight: bolder;
   color: black;
-  padding-top: 0.5vw;
-  border-radius: 2rem;
-  text-align: justify;
   flex-grow: 1 !important;
+  overflow-y: auto;
 }
 
 /*** FOOTER ***/
 
 footer {
+  display: flex;
+  align-items: center;
   height: 50px;
 }
 
@@ -444,7 +446,7 @@ input {
   color: #fe142f;
   padding: 0;
   font-size: 1rem;
-  margin: 60px 0 30px;
+  /* margin: 60px 0 30px; */
   font-weight: bolder;
 }
 
@@ -458,7 +460,9 @@ input {
       display: none;
     }
     & .btn-menu-burger {
-      display: block !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
     }
   }
   .hero-section {
@@ -496,6 +500,9 @@ input {
       padding: 12px 35px;
     }
   }
+  footer {
+
+  }
 }
 @media screen and (max-width: 800px) {
   header {
@@ -509,9 +516,8 @@ input {
       }
     }
   } 
-  .copyrights {
-    margin-top: 50px;
-    text-align: center;
+  footer {
+    justify-content: center;
   }
   nav ul {
     flex-direction: column;
