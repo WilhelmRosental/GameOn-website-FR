@@ -1,5 +1,4 @@
 /** ------------------------ DOM ELEMENTS ------------------------ **/
-// const burgerMenuBtn = document.getElementById("burgerMenuBtn");
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".btn-modal");
 const formContainer = document.getElementById("formContainer");
@@ -21,9 +20,9 @@ const errorMsgElements = {
 function toggleMenu() {
   var menu = document.getElementById('menuContainer');
   if (menu.style.left === '0px') {
-      menu.style.left = '-100%'; // Cache le menu
+      menu.style.left = '-100%';
   } else {
-      menu.style.left = '0px'; // Affiche le menu
+      menu.style.left = '0px';
   }
 }
 
@@ -105,7 +104,7 @@ formContainer.addEventListener("submit", (e) => {
   if (isFormValid) {
     modalbg.style.display = "none";
     formConfirmationModal.style.display = "block";
-    console.log('Inputs :', formInputs); //TODO : Send form data to the API ?
+    console.log('Inputs :', formInputs);
     formContainer.reset();
   }
 });
